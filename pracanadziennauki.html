@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Losowa pytania z bilogi</title>
+
+</head>
+<body bgcolor="#6ec274" text="#000000"><center>
+    <h1>Losowe giga łatywe pytania z biologi </h1><br>
+    <h3>zadady zabway: jedna osoba czyta i sparwdza wiedze drugiej ez </h3>
+    <p id="randompytanie" alt="Losowy pytaanie"></p><br>
+    
+    <br>
+    <button onclick="losujpytanie()">Losuj pytanie</button><br>
+    <p id="odpowiedzi"></p>
+
+</center>
+    <script>
+        function losujpytanie() {
+            var pytanie = [
+                'Co to jest fotosynteza?',
+                'Jakie są trzy podstawowe typy komórek?',
+                'Co to jest DNA?',
+                'Jakie są trzy rodzaje skupisk organizmów w ekosystemie?',
+                'Co to jest mitoza?',
+                'Jakie są trzy główne grupy składników odżywczych?',
+                'Co to jest ekosystem?',
+                'Jakie są trzy rodzaje symbiozy?',
+                'Jakie są cztery podstawowe grupy tkanek w organizmach wielokomórkowych?'
+            ];
+            
+            var odp = [
+                'Proces, w którym rośliny i niektóre bakterie przetwarzają światło słoneczne, wodę i dwutlenek węgla na glukozę i tlen',
+                'Komórki prokariotyczne (bez jądra), komórki eukariotyczne roślinne i komórki eukariotyczne zwierzęce.',
+                'Kwas deoksyrybonukleinowy, nośnik informacji genetycznej w komórkach, odpowiedzialny za dziedziczenie cech i kontrolę procesów życiowych.',
+                'Producenci (rośliny), konsumenty (zwierzęta) i destruenci (mikroorganizmy rozkładające martwe substancje organiczne).',
+                'Proces podziału komórkowego, w wyniku którego jedna komórka macierzysta dzieli się na dwie identyczne komórki potomne.',
+                'Białka, tłuszcze i węglowodany.',
+                'Zintegrowane środowisko, które obejmuje organizmy żywe i ich otoczenie fizyczne, współdziałające w ramach cykli materii i przepływów energii.',
+                'Mutualizm (obie strony korzystają), komensalizm (jedna strona korzysta, druga nie jest dotknięta), i pasożytnictwo (jedna strona korzysta kosztem drugiej).',
+                'Tkanka nabłonkowa, tkanka łączna, tkanka mięśniowa i tkanka nerwowa.']
+       
+            var losowyIndex = Math.floor(Math.random() * pytanie.length);
+            var losowypytanie = pytanie[losowyIndex];
+            var odpowiedz = odp[losowyIndex];
+
+            document.getElementById('randompytanie').innerHTML = "twoje pytanie to: " + losowypytanie;
+            document.getElementById('odpowiedzi').innerHTML = " przykladowa odpowiedz to odpowiedz to: " + odpowiedz;
+            
+
+        }
+
+
+    </script>
+</body>
+</html>
